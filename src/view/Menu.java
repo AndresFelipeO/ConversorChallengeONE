@@ -21,8 +21,8 @@ public class Menu extends JPanel {
 	public Menu(JPanel pnlContenedor) {
 		setLayout(null);
 		
-		JButton btnConversor_1 = new JButton("");
-		btnConversor_1.addActionListener(new ActionListener() {
+		JButton btnDivisas = new JButton("");
+		btnDivisas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PnlConversorDivisas conversorDivisas=new PnlConversorDivisas(pnlContenedor);
 				conversorDivisas.setSize(451,251);
@@ -32,21 +32,36 @@ public class Menu extends JPanel {
 				pnlContenedor.repaint();
 			}
 		});
-		btnConversor_1.setBounds(12, 12, 70, 70);
-		btnConversor_1.setIcon(new ImageIcon("/home/andresfo/Documentos/Codigos/Java/PryConversor/resources/cambio-de-divisas.png"));
-		btnConversor_1.setToolTipText("");
-		btnConversor_1.setMargin(new Insets(0, 0, 0, 0));
-		btnConversor_1.setForeground(new Color(36, 31, 49));
-		btnConversor_1.setFont(new Font("Dialog", Font.ITALIC, 12));
-		btnConversor_1.setBorderPainted(false);
-		btnConversor_1.setBackground(new Color(248, 228, 92));
-		add(btnConversor_1);
+		btnDivisas.setBounds(12, 12, 70, 70);
+		btnDivisas.setIcon(new ImageIcon("/home/andresfo/Documentos/Codigos/Java/PryConversor/resources/cambio-de-divisas.png"));
+		btnDivisas.setToolTipText("");
+		btnDivisas.setMargin(new Insets(0, 0, 0, 0));
+		btnDivisas.setForeground(new Color(36, 31, 49));
+		btnDivisas.setFont(new Font("Dialog", Font.ITALIC, 12));
+		btnDivisas.setBorderPainted(false);
+		btnDivisas.setBackground(new Color(248, 228, 92));
+		add(btnDivisas);
 		
-		JLabel lblNewLabel = new JLabel("Divisas");
-		lblNewLabel.setBounds(10, 84, 72, 15);
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		add(lblNewLabel);
+		JLabel lblDivisas = new JLabel("Divisas");
+		lblDivisas.setBounds(10, 84, 72, 15);
+		lblDivisas.setHorizontalAlignment(SwingConstants.CENTER);
+		add(lblDivisas);
+		
+		JButton btnTemperatura = new JButton("");
+		btnTemperatura.setIcon(new ImageIcon("/home/andresfo/Descargas/caliente.png"));
+		btnTemperatura.setToolTipText("");
+		btnTemperatura.setMargin(new Insets(0, 0, 0, 0));
+		btnTemperatura.setForeground(new Color(36, 31, 49));
+		btnTemperatura.setFont(new Font("Dialog", Font.ITALIC, 12));
+		btnTemperatura.setBorderPainted(false);
+		btnTemperatura.setBackground(new Color(98, 160, 234));
+		btnTemperatura.setBounds(136, 12, 70, 70);
+		add(btnTemperatura);
+		
+		JLabel lblTemperatura = new JLabel("Temperatura");
+		lblTemperatura.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTemperatura.setBounds(125, 84, 92, 15);
+		add(lblTemperatura);
 
 	}
-
 }

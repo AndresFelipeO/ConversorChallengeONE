@@ -1,32 +1,14 @@
 package view;
 
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Color;
 import java.awt.BorderLayout;
 import javax.swing.SwingConstants;
-import com.jgoodies.forms.factories.DefaultComponentFactory;
-import java.awt.Component;
-
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.JButton;
-import javax.swing.JDesktopPane;
-import javax.swing.JSplitPane;
-import java.awt.GridLayout;
-import java.awt.Insets;
-import java.awt.geom.RoundRectangle2D;
-
-import javax.swing.JTextField;
-import javax.swing.ImageIcon;
 import java.awt.Font;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class Aplicacion extends JFrame {
 
@@ -49,7 +31,7 @@ public class Aplicacion extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * @brief Create the frame.
 	 */
 	public Aplicacion() {
 			

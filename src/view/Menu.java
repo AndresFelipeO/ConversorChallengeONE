@@ -21,7 +21,7 @@ public class Menu extends JPanel {
 	public Menu(JPanel pnlContenedor) {
 		setLayout(null);
 		
-		JButton btnDivisas = new JButton("");
+		JButton btnDivisas = miBoton(new Color(248, 228, 92),new Color(36, 31, 49),"resources/cambio-de-divisas.png", 12, 12);
 		btnDivisas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PnlConversorDivisas conversorDivisas=new PnlConversorDivisas(pnlContenedor);
@@ -32,14 +32,6 @@ public class Menu extends JPanel {
 				pnlContenedor.repaint();
 			}
 		});
-		btnDivisas.setBounds(12, 12, 70, 70);
-		btnDivisas.setIcon(new ImageIcon("/home/andresfo/Documentos/Codigos/Java/PryConversor/resources/cambio-de-divisas.png"));
-		btnDivisas.setToolTipText("");
-		btnDivisas.setMargin(new Insets(0, 0, 0, 0));
-		btnDivisas.setForeground(new Color(36, 31, 49));
-		btnDivisas.setFont(new Font("Dialog", Font.ITALIC, 12));
-		btnDivisas.setBorderPainted(false);
-		btnDivisas.setBackground(new Color(248, 228, 92));
 		add(btnDivisas);
 		
 		JLabel lblDivisas = new JLabel("Divisas");
@@ -47,21 +39,33 @@ public class Menu extends JPanel {
 		lblDivisas.setHorizontalAlignment(SwingConstants.CENTER);
 		add(lblDivisas);
 		
-		JButton btnTemperatura = new JButton("");
-		btnTemperatura.setIcon(new ImageIcon("/home/andresfo/Descargas/caliente.png"));
-		btnTemperatura.setToolTipText("");
-		btnTemperatura.setMargin(new Insets(0, 0, 0, 0));
-		btnTemperatura.setForeground(new Color(36, 31, 49));
-		btnTemperatura.setFont(new Font("Dialog", Font.ITALIC, 12));
-		btnTemperatura.setBorderPainted(false);
-		btnTemperatura.setBackground(new Color(98, 160, 234));
-		btnTemperatura.setBounds(136, 12, 70, 70);
+		JButton btnTemperatura = miBoton(new Color(98, 160, 234),new Color(36, 31, 49),"resources/caliente.png", 136, 12);
 		add(btnTemperatura);
 		
 		JLabel lblTemperatura = new JLabel("Temperatura");
 		lblTemperatura.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTemperatura.setBounds(125, 84, 92, 15);
 		add(lblTemperatura);
-
+	}
+	/**
+	 * @brief metodo para personalizar el icono y el color de un jbutton general del menu
+	 * @param prmColor
+	 * @param prmColor2
+	 * @param imagen
+	 * @param x
+	 * @param y
+	 * @return jButton personlizado general del menu
+	 */
+	private JButton miBoton(Color prmColor,Color prmColor2,String imagen,int x,int y){
+		JButton btnBoton = new JButton("");
+		btnBoton.setIcon(new ImageIcon(imagen));
+		btnBoton.setToolTipText("");
+		btnBoton.setMargin(new Insets(0, 0, 0, 0));
+		btnBoton.setForeground(prmColor2);
+		btnBoton.setFont(new Font("Dialog", Font.ITALIC, 12));
+		btnBoton.setBorderPainted(false);
+		btnBoton.setBackground(prmColor);
+		btnBoton.setBounds(x, y, 70, 70);
+		return btnBoton;
 	}
 }

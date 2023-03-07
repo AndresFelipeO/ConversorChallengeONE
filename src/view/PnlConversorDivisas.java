@@ -88,7 +88,15 @@ public class PnlConversorDivisas extends JPanel {
 			}
 		});
 	}
-
+	
+	/**
+	 * @brief tiene los metodos de los eventos del JTextField para actualizar el valor de la monedad automaticamente
+	 * @param jTextFIntercambio
+	 * @param jTextFlocal
+	 * @param cmbBox
+	 * @param tipo
+	 * @return DocumentListener
+	 */
 	private DocumentListener documentosLst(JTextField jTextFIntercambio,JTextField jTextFlocal,JComboBox cmbBox,int tipo){
 		return new DocumentListener(){
 			@Override
@@ -105,9 +113,16 @@ public class PnlConversorDivisas extends JPanel {
 			public void removeUpdate(DocumentEvent e) {
 				calcularMoneda(jTextFIntercambio,jTextFlocal,cmbBox,tipo);
 			}
+			
 		};
 	}
-
+	/**
+	 * @brief Calcula la divisa del tipo de moneda selecionada y valida que solo sea numeros
+	 * @param jTextFIntercambio
+	 * @param jTextFlocal
+	 * @param cmbBox
+	 * @param tipo
+	 */
 	private void calcularMoneda(JTextField jTextFIntercambio,JTextField jTextFlocal,JComboBox cmbBox,int tipo){
 		try {
 			Moneda conversionDivisa=new PesoColombiano();
@@ -116,9 +131,7 @@ public class PnlConversorDivisas extends JPanel {
 			else
 				jTextFIntercambio.setText(String.valueOf(conversionDivisa.conversor(conversionDivisa.intercambioPaises.get(cmbBox.getSelectedItem()),Double.parseDouble(jTextFlocal.getText()),1)));
 		} catch (Exception e) {
-			//JOptionPane.showMessageDialog( null,"Verifique los datos ingresados","Error",JOptionPane.ERROR_MESSAGE);
+			
 		}
-		
-
 	}
 }
